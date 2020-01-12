@@ -1,0 +1,383 @@
+body {
+	background-color:#a6bf79;
+	color:#000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 10px 10px;
+	padding: 0px;
+}
+.clear{clear:both;}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#container {
+	margin: 0px auto;
+	text-align: left;
+	width: 717px;
+}
+a{
+	font-size:12px;
+}
+p{
+	margin: 15px 0px;
+	text-align: justify;
+}
+.orange{
+	color: #c77e0c;
+}
+/********************** Header ***************************/
+#header {
+	margin: 0px 0px 0px 0px;
+	background-image:url(images/header.jpg);
+	width:717px;
+	height:288px;
+	position:relative;
+}
+#header ul{
+	background-color:#85a157;
+	width:711px;
+	border: 3px solid #FFFFFF;
+	display:block;
+	top:255px;
+	position:absolute;
+	margin: 0px 0px 0px 0px;
+	height:22px;
+	padding:5px 0px 0px 0px;
+	text-align:center;
+}
+#header li{
+	display:inline;	
+}
+#header ul a{
+	text-decoration:none;
+	color:#FFFFFF;
+	margin: 0px 15px;
+}
+#header ul a:hover{
+	text-decoration:underline;
+	color:#28556b;
+}
+#content ul{
+	margin: 10px;
+}
+#content li{
+	margin-bottom: 10px;
+}
+#logo_w1 {
+	font-size: 40px;
+	font-family: Tempus Sans ITC;
+	color:#FFFFFF;
+	position:absolute;
+}
+#logo_w2 {
+	font-size: 16px;
+	font-style:italic;
+	color:#FFFFFF;
+	position:absolute;
+}
+#logo_w1{
+	top:15px;
+	left:70px;
+}
+#logo_w2{
+	top:54px;
+	left:94px;
+}
+#header_text {
+	top:90px;
+	left:43px;
+	width:230px;
+	position:absolute;
+}
+#header_text p{
+	font-size: 18px;
+	color:#FFFFFF;
+}
+#header_text a{color:#28556b;}
+#header_text a:hover{color:#c77e0c;}
+/********************** Content ***************************/
+#content {
+	background-image:url(images/content_bg.gif);
+	width:717px;
+}
+img{
+	border-width:0px;
+}
+content_h1{
+	color:#000000;
+	font-size:12px;
+	margin: 20px 0px 20px 0px;
+}
+
+h1,h3{
+	color:#000000;
+	font-size:14px;
+	margin: 20px 0px 20px 0px;
+}
+
+h2{
+	color:#85a157;
+	font-size:14px;
+	text-align:center;
+	margin: 10px 0px 15px 0px;
+}
+.right h2{
+	width:200px;
+}
+h2.orange{
+	font-size: 16px;
+	width:100%;
+	text-align: left;
+}
+h3.para{
+	margin-bottom:5px;
+	}
+p.para{
+	margin-top:5px;
+}
+#ahead{
+	color:#85a157;
+	font-size:14px;
+	text-align:left;
+	font-weight:bold;
+}
+#left {
+	float:left;
+	width:428px;
+	margin-left:27px;
+	padding: 0px 10px 30px 0px;
+	display:inline;
+}
+#left a{color:#28556b;}
+#left a:hover{color:#c77e0c;}
+#normal {
+	float:left;
+	width:665px;
+	margin-left:27px;
+	padding: 0px 10px 30px 0px;
+	display:inline;
+}
+#normal a{color:#28556b;}
+#normal a:hover{color:#c77e0c;}
+
+#photos a{
+	margin-right:14px;
+}
+#right {
+	float:right;
+	width:210px;
+	padding: 0px 20px 20px 20px;
+	margin-top:10px;
+	border-left: #FFF 2px solid;
+
+}
+#right a{
+	color:#c77e0c;
+}
+#right a:hover{
+	color:#85a157;
+}
+/********************** Footer ***************************/
+#footerline {
+clear:both;
+background-image:url(images/footer_bg.gif);
+font-size:1px;
+height:10px;
+}
+#footer {
+	width:717px;
+	text-align:center;
+	padding: 20px 0px;
+}
+
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.gallerycontainer{
+position: relative;
+/*Add a height attribute and set to largest image's height to prevent overlaying*/
+}
+
+.thumbnail img{
+border: 1px solid white;
+margin: 0 5px 5px 0;
+}
+
+.thumbnail:hover{
+background-color: transparent;
+}
+
+.thumbnail:hover img{
+border: 1px solid blue;
+}
+
+.thumbnail span{ /*CSS for enlarged image*/
+position: absolute;
+background-color: lightyellow;
+padding: 5px;
+left: -1000px;
+border: 1px;
+visibility: hidden;
+color: black;
+text-decoration: none;
+}
+
+.thumbnail span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+}
+
+.thumbnail:hover span{ /*CSS for enlarged image*/
+visibility: visible;
+top: 300px;
+left: 230px; /*position where enlarged image should offset horizontally */
+z-index: 50;
+}
+
+.clearfix{
+	clear:both;
+	float:none;
+}
+#body{float:left;}
+#bigPic{
+	width:600px;
+	height:400px;
+	padding:1px;
+	border:1px solid #CCC;
+	background-color:#FFF;
+	margin-bottom:10px;
+}
+#bigPic img{
+	position:absolute;
+	display:none;
+	width:600px;
+	height:400px;
+}
+ul#thumbs li.active{
+	border:2px solid #000;	
+	background:#fff;
+	padding:2px;
+}
+ul#thumbs, ul#thumbs li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+	
+ul#thumbs li{
+	float:left;
+	margin-right:7px;
+	margin-bottom:5px;
+	border:1px solid #CCC;	
+	padding:3px;
+	cursor:pointer;
+}
+ul#thumbs img{
+	float:left;
+	width:80px;
+	height:60px;
+	line-height:60px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;		
+}
+
+ /* jssor slider arrow navigator skin 11 css */
+	/*
+.jssora11l              (normal)
+.jssora11r              (normal)
+.jssora11l:hover        (normal mouseover)
+.jssora11r:hover        (normal mouseover)
+.jssora11ldn            (mousedown)
+.jssora11rdn            (mousedown)
+*/
+.jssora11l, .jssora11r, .jssora11ldn, .jssora11rdn {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	background: url(images/a11.png) no-repeat;
+	overflow: hidden;
+}
+
+.jssora11l {
+	background-position: -11px -41px;
+}
+
+.jssora11r {
+	background-position: -71px -41px;
+}
+
+.jssora11l:hover {
+	background-position: -131px -41px;
+}
+
+.jssora11r:hover {
+	background-position: -191px -41px;
+}
+
+.jssora11ldn {
+	background-position: -251px -41px;
+}
+
+.jssora11rdn {
+	background-position: -311px -41px;
+}
+
+/* jssor slider thumbnail navigator skin 07 css */
+/*
+.jssort07 .p            (normal)
+.jssort07 .p:hover      (normal mouseover)
+.jssort07 .pav          (active)
+.jssort07 .pav:hover    (active mouseover)
+.jssort07 .pdn          (mousedown)
+*/
+.jssort07 .i {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 99px;
+	height: 66px;
+	filter: alpha(opacity=80);
+	opacity: .8;
+}
+
+.jssort07 .p:hover .i, .jssort07 .pav .i {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.jssort07 .o {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 97px;
+	height: 64px;
+	border: 1px solid #000;
+	transition: border-color .6s;
+	-moz-transition: border-color .6s;
+	-webkit-transition: border-color .6s;
+	-o-transition: border-color .6s;
+}
+
+* html .jssort07 .o {
+	/* ie quirks mode adjust */
+	width /**/: 99px;
+	height /**/: 66px;
+}
+
+.jssort07 .pav .o, .jssort07 .p:hover .o {
+	border-color: #fff;
+}
+
+.jssort07 .pav:hover .o {
+	border-color: #0099FF;
+}
+
+.jssort07 .p:hover .o {
+	transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	-o-transition: none;
+}
