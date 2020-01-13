@@ -29,7 +29,7 @@ p{
 /********************** Header ***************************/
 #header {
 	margin: 0px 0px 0px 0px;
-	background-image:url(images/header.jpg);
+	background-image:url(https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/header.jpg);
 	width:717px;
 	height:288px;
 	position:relative;
@@ -47,7 +47,7 @@ p{
 	text-align:center;
 }
 #header li{
-	display:inline;	
+	display:inline;
 }
 #header ul a{
 	text-decoration:none;
@@ -98,7 +98,7 @@ p{
 #header_text a:hover{color:#c77e0c;}
 /********************** Content ***************************/
 #content {
-	background-image:url(images/content_bg.gif);
+	background-image:url(https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/content_bg.gif);
 	width:717px;
 }
 img{
@@ -181,7 +181,7 @@ p.para{
 /********************** Footer ***************************/
 #footerline {
 clear:both;
-background-image:url(images/footer_bg.gif);
+background-image:url(https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/footer_bg.gif);
 font-size:1px;
 height:10px;
 }
@@ -256,7 +256,7 @@ z-index: 50;
 	height:400px;
 }
 ul#thumbs li.active{
-	border:2px solid #000;	
+	border:2px solid #000;
 	background:#fff;
 	padding:2px;
 }
@@ -265,12 +265,12 @@ ul#thumbs, ul#thumbs li{
 	padding:0;
 	list-style:none;
 }
-	
+
 ul#thumbs li{
 	float:left;
 	margin-right:7px;
 	margin-bottom:5px;
-	border:1px solid #CCC;	
+	border:1px solid #CCC;
 	padding:3px;
 	cursor:pointer;
 }
@@ -281,7 +281,7 @@ ul#thumbs img{
 	line-height:60px;
 	overflow:hidden;
 	position:relative;
-	z-index:1;		
+	z-index:1;
 }
 
  /* jssor slider arrow navigator skin 11 css */
@@ -297,7 +297,7 @@ ul#thumbs img{
 	position: absolute;
 	cursor: pointer;
 	display: block;
-	background: url(images/a11.png) no-repeat;
+	background: url('https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/a11.png') no-repeat;
 	overflow: hidden;
 }
 
