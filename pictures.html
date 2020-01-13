@@ -1,0 +1,1111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<title>HAPsI</title>
+<script type="text/javascript" src="_wp_scripts/jquery-1.4.1.js"></script>
+<script type="text/javascript" src="_wp_scripts/jssor.slider.mini.js"></script>
+<!--script type="text/javascript">
+	var currentImage;
+    var currentIndex = -1;
+    var interval;
+    function showImage(index){
+        if(index < $('#bigPic img').length){
+        	var indexImage = $('#bigPic img')[index]
+            if(currentImage){
+            	if(currentImage != indexImage ){
+                    $(currentImage).css('z-index',2);
+                    clearTimeout(myTimer);
+                    $(currentImage).fadeOut(250, function() {
+					    myTimer = setTimeout("showNext()", 3000);
+					    $(this).css({'display':'none','z-index':1})
+					});
+                }
+            }
+            $(indexImage).css({'display':'block', 'opacity':1});
+            currentImage = indexImage;
+            currentIndex = index;
+            $('#thumbs li').removeClass('active');
+            $($('#thumbs li')[index]).addClass('active');
+        }
+    }
+
+    function showNext(){
+        var len = $('#bigPic img').length;
+        var next = currentIndex < (len-1) ? currentIndex + 1 : 0;
+        showImage(next);
+    }
+
+    var myTimer;
+
+    $(document).ready(function() {
+	    myTimer = setTimeout("showNext()", 3000);
+		showNext(); //loads first image
+        $('#thumbs li').bind('click',function(e){
+        	var count = $(this).attr('rel');
+        	showImage(parseInt(count)-1);
+        });
+	});
+
+
+	</script-->
+
+	<script>
+        $(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlayInterval: 2000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $UISearchMode: 0,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+                    $SpacingX: 3,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 3,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 5,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 204,                          //[Optional] The offset position to park thumbnail,
+
+                    $ArrowNavigatorOptions: {
+                        $Class: $JssorArrowNavigator$,              //[Requried] Class to create arrow navigator instance
+                        $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                        $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                        $Steps: 5                                       //[Optional] Steps to go for each navigation request, default value is 1
+                    }
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$SetScaleWidth(Math.min(parentWidth, 665));
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+
+            if (!navigator.userAgent.match(/(iPhone|iPod|iPad|BlackBerry|IEMobile)/)) {
+                $(window).bind('resize', ScaleSlider);
+            }
+
+
+            //if (navigator.userAgent.match(/(iPhone|iPod|iPad)/)) {
+            //    $(window).bind("orientationchange", ScaleSlider);
+            //}
+            //responsive code end
+        });
+    </script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<div id="logo_w1">HAPsI</div>
+		<div id="logo_w2">Helping Alleviate Poverty in south India</div>
+		<div id="header_text">
+			<p>Make a donation today and help children</p>
+			<a href="donate.html">Make a donation now !</a>
+		</div>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">AIMS</a></li>
+			<li><a href="donate.html">Make a donation</a></li>
+			<li><a href="pictures.html">Pictures</a></li>
+			<li><a href="news.html">Newsletter</a></li>
+            <li><a href="education.html">Education</a></li>
+			<li><a href="contactus.html">Contact us</a></li>
+		</ul>
+	</div>
+
+	<div id="content">
+		<div id="left">
+			<h1>Awake Mercy Home Pictures</h1>
+
+			<!--a href="/pictures_cow.html" title="Cow pictures"><b>Cow Pictures</b></a-->
+<br /><br />
+ <div id='wrapper'>
+		<div id='header-cow'></div>
+		<div id='body'>
+			<!--div id="bigPic">
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p2.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p3.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p4.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p5.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p6.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p7.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p8.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p9.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p10.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p11.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p12.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p13.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p14.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p15.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p16.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p17.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p18.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p19.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p20.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p21.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p22.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p23.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p24.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p25.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p26.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p27.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p28.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p29.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p30.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p31.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p32.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p33.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p34.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p35.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p36.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p37.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p38.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p39.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p40.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p41.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p42.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p43.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p44.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p45.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p46.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p47.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p48.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p49.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p50.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p51.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p52.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p52.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p53.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p54.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p55.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p56.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p57.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p58.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p59.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p60.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p61.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p62.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p63.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p64.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p65.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p66.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p67.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p68.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p69.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p70.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p71.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p72.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p73.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p74.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p75.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p76.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p77.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p78.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p79.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p80.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p81.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p82.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p83.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p84.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p85.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p86.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p87.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p88.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p89.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p90.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p91.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p92.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p93.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p94.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p95.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p96.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p97.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p98.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p99.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p100.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p102.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p103.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p104.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p105.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p106.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p107.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p108.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p109.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p110.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p111.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p112.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p113.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p114.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p115.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p116.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p117.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p118.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p119.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p120.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+				<img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" alt="" />
+
+		</div>
+
+
+			<ul id="thumbs">
+				<li class='active' rel='1'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p1_t.jpg" alt="" /> </li>
+				<li rel='2'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p2_t.jpg" alt="" /></li>
+				<li rel='3'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p3_t.jpg" alt="" /></li>
+				<li rel='4'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p4_t.jpg" alt="" /></li>
+				<li rel='5'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p5_t.jpg" alt="" /></li>
+				<li rel='6'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p6_t.jpg" alt="" /></li>
+				<li rel='7'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p7_t.jpg" alt="" /></li>
+				<li rel='8'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p8_t.jpg" alt="" /></li>
+				<li rel='9'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p9_t.jpg" alt="" /></li>
+				<li rel='10'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p10_t.jpg" alt="" /></li>
+				<li rel='11'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p11_t.jpg" alt="" /></li>
+				<li rel='12'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p12_t.jpg" alt="" /></li>
+				<li rel='13'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p13_t.jpg" alt="" /></li>
+				<li rel='14'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p14_t.jpg" alt="" /></li>
+				<li rel='15'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p15_t.jpg" alt="" /></li>
+				<li rel='16'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p16_t.jpg" alt="" /></li>
+				<li rel='17'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p17_t.jpg" alt="" /></li>
+				<li rel='18'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p18_t.jpg" alt="" /></li>
+				<li rel='19'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p19_t.jpg" alt="" /></li>
+				<li rel='20'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p20_t.jpg" alt="" /></li>
+				<li rel='21'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p21_t.jpg" alt="" /></li>
+				<li rel='22'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p22_t.jpg" alt="" /></li>
+				<li rel='23'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p23_t.jpg" alt="" /></li>
+				<li rel='24'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p24_t.jpg" alt="" /></li>
+				<li rel='25'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p25_t.jpg" alt="" /></li>
+				<li rel='26'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p26_t.jpg" alt="" /></li>
+				<li rel='27'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p27_t.jpg" alt="" /></li>
+				<li rel='28'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p28_t.jpg" alt="" /></li>
+				<li rel='29'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p29_t.jpg" alt="" /></li>
+				<li rel='30'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p30_t.jpg" alt="" /></li>
+				<li rel='31'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p31_t.jpg" alt="" /></li>
+				<li rel='32'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p32_t.jpg" alt="" /></li>
+				<li rel='33'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p33_t.jpg" alt="" /></li>
+				<li rel='34'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p34_t.jpg" alt="" /></li>
+				<li rel='35'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p35_t.jpg" alt="" /></li>
+				<li rel='36'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p36_t.jpg" alt="" /></li>
+				<li rel='37'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p37_t.jpg" alt="" /></li>
+				<li rel='38'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p38_t.jpg" alt="" /></li>
+				<li rel='39'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p39_t.jpg" alt="" /></li>
+				<li rel='40'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p40_t.jpg" alt="" /></li>
+				<li rel='41'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p41_t.jpg" alt="" /></li>
+				<li rel='42'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p42_t.jpg" alt="" /></li>
+				<li rel='43'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p43_t.jpg" alt="" /></li>
+				<li rel='44'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p44_t.jpg" alt="" /></li>
+				<li rel='45'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p45_t.jpg" alt="" /></li>
+				<li rel='46'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p46_t.jpg" alt="" /></li>
+				<li rel='47'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p47_t.jpg" alt="" /></li>
+				<li rel='48'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p48_t.jpg" alt="" /></li>
+				<li rel='49'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p49_t.jpg" alt="" /></li>
+				<li rel='50'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p50_t.jpg" alt="" /></li>
+				<li rel='51'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p51_t.jpg" alt="" /></li>
+				<li rel='52'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p52_t.jpg" alt="" /></li>
+				<li rel='53'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p53_t.jpg" alt="" /></li>
+				<li rel='54'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p54_t.jpg" alt="" /></li>
+				<li rel='55'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p55_t.jpg" alt="" /></li>
+				<li rel='56'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p56_t.jpg" alt="" /></li>
+				<li rel='57'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p57_t.jpg" alt="" /></li>
+				<li rel='58'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p58_t.jpg" alt="" /></li>
+				<li rel='59'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p59_t.jpg" alt="" /></li>
+				<li rel='60'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p60_t.jpg" alt="" /></li>
+				<li rel='61'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p61_t.jpg" alt="" /></li>
+				<li rel='62'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p62_t.jpg" alt="" /></li>
+				<li rel='63'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p63_t.jpg" alt="" /></li>
+				<li rel='64'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p64_t.jpg" alt="" /></li>
+				<li rel='65'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p65_t.jpg" alt="" /></li>
+				<li rel='66'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p66_t.jpg" alt="" /></li>
+				<li rel='67'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p67_t.jpg" alt="" /></li>
+				<li rel='68'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p68_t.jpg" alt="" /></li>
+				<li rel='69'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p69_t.jpg" alt="" /></li>
+				<li rel='70'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p70_t.jpg" alt="" /></li>
+				<li rel='71'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p71_t.jpg" alt="" /></li>
+				<li rel='72'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p72_t.jpg" alt="" /></li>
+				<li rel='73'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p73_t.jpg" alt="" /></li>
+				<li rel='74'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p74_t.jpg" alt="" /></li>
+				<li rel='75'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p75_t.jpg" alt="" /></li>
+				<li rel='76'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p76_t.jpg" alt="" /></li>
+				<li rel='77'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p77_t.jpg" alt="" /></li>
+				<li rel='78'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p78_t.jpg" alt="" /></li>
+				<li rel='79'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p79_t.jpg" alt="" /></li>
+				<li rel='80'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p80_t.jpg" alt="" /></li>
+				<li rel='81'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p81_t.jpg" alt="" /></li>
+				<li rel='82'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p81_t.jpg" alt="" /></li>
+				<li rel='83'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p83_t.jpg" alt="" /></li>
+				<li rel='84'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p84_t.jpg" alt="" /></li>
+				<li rel='85'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p85_t.jpg" alt="" /></li>
+				<li rel='86'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p86_t.jpg" alt="" /></li>
+				<li rel='87'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p87_t.jpg" alt="" /></li>
+				<li rel='88'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p88_t.jpg" alt="" /></li>
+				<li rel='89'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p89_t.jpg" alt="" /></li>
+				<li rel='90'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p90_t.jpg" alt="" /></li>
+				<li rel='91'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p91_t.jpg" alt="" /></li>
+				<li rel='92'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p92_t.jpg" alt="" /></li>
+				<li rel='93'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p93_t.jpg" alt="" /></li>
+				<li rel='94'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p94_t.jpg" alt="" /></li>
+				<li rel='95'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p95_t.jpg" alt="" /></li>
+				<li rel='96'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p96_t.jpg" alt="" /></li>
+				<li rel='97'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p97_t.jpg" alt="" /></li>
+				<li rel='98'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p98_t.jpg" alt="" /></li>
+				<li rel='99'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p99_t.jpg" alt="" /></li>
+				<li rel='100'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p100_t.jpg" alt="" /></li>
+				<li rel='101'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p101_t.jpg" alt="" /></li>
+				<li rel='102'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p102_t.jpg" alt="" /></li>
+				<li rel='103'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p103_t.jpg" alt="" /></li>
+				<li rel='104'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p104_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p105_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p106_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p107_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p108_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p109_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p110_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p111_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p112_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p113_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p114_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p115_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p116_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p117_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p118_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p119_t.jpg" alt="" /></li>
+				<li rel='105'><img src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p120_t.jpg" alt="" /></li>
+
+			</ul-->
+
+			    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; width: 665px;
+        height: 480px; overflow: hidden;">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 665px; height: 480px;
+            overflow: hidden;">
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic1.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic1_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic2.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic2_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic3.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic3_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic4.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic4_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic5.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic5_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic6.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic6_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic7.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic7_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic8.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic8_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic9.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic9_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic10.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic10_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic11.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic11_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic12.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic12_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic13.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic13_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic14.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic14_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic15.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic15_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic16.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic16_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic17.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic17_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic18.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic18_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic19.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic19_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic20.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic20_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic21.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic21_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic22.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic22_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic23.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic23_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic24.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic24_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic25.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic25_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic26.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic26_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic27.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic27_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic28.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic28_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic29.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic29_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic30.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic30_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic31.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic31_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic32.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic32_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic33.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic33_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic34.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic34_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic35.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic35_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic36.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic36_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic37.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic37_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic38.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic38_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic39.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic39_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic40.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic40_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic41.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic41_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic42.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic42_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic43.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic43_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic44.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic44_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic45.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic45_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic46.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic46_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic47.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic47_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic48.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic48_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic49.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic49_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic50.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic50_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic51.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic51_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic52.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic52_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic53.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic53_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic54.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic54_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic55.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic55_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic56.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic56_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic57.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic57_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic58.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic58_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic59.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic53_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic60.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic60_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic61.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic61_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic62.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic62_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic/pic63.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pic_t/pic63_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p1.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p1_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p2.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p2_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p3.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p3_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p4.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p4_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p5.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p5_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p6.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p6_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p7.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p7_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p8.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p8_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p10.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p10_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p114.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p114_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p115.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p115_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p116.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p116_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p117.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p117_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p118.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p118_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p119.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p119_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p120.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p120_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p121.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p121_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p122.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p122_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p123.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p123_t.jpg" />
+            </div>
+
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p11.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p11_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p12.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p12_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p13.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p13_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p14.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p14_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p15.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p15_t.jpg" />
+            </div>
+             <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p16.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p16_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p17.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p17_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p18.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p18_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p19.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p19_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p20.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p20_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p21.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p21_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p22.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p22_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p23.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p23_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p24.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p24_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p29.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p29_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p30.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p30_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p31.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p31_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p32.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p32_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p33.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p33_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p34.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p34_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p35.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p35_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p36.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p36_t.jpg" />
+            </div><div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p38.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p38_t.jpg" />
+            </div> <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p39.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p39_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p40.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p40_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p41.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p41_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p42.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p42_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p43.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p43_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p44.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p44_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p45.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p45_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p46.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p46_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p47.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p47_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p48.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p48_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p49.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p49_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p50.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p50_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p51.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p51_t.jpg" />
+            </div>
+
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p53.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p53_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p54.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p54_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p55.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p55_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p56.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p56_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p57.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p57_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p58.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p58_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p59.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p59_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p60.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p60_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p61.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p61_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p62.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p62_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p63.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p63_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p65.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p65_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p66.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p66_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p69.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p69_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p70.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p70_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p71.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p71_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p72.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p72_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p73.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p73_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p74.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p74_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p75.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p75_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p76.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p76_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p78.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p78_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p79.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p79_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p80.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p80_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p81.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p81_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p82.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p82_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p83.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p83_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p84.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p84_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p85.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p85_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p86.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p86_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p87.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p87_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p88.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p88_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p89.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p89_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p90.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p90_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p91.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p91_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p92.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p92_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p93.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p93_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p94.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p94_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p95.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p95_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p96.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p96_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p97.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p97_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p98.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p98_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p99.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p99_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p100.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p100_t.jpg" />
+            </div>
+            <div>
+                <img u="image" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures/p113.jpg" />
+                <img u="thumb" src="https://raw.githubusercontent.com/Janpra83/MyFiles/master/images/pictures_t/p113_t.jpg" />
+            </div>
+
+
+        </div>
+
+        <!-- Thumbnail Navigator Skin Begin -->
+        <div u="thumbnavigator" class="jssort07" style="position: absolute; width: 665px; height: 100px; left: 0px; bottom: 0px; overflow: hidden; ">
+            <div style=" background-color: #000; filter:alpha(opacity=30); opacity:.3; width: 100%; height:100%;"></div>
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: move;">
+                <div u="prototype" class="p" style="POSITION: absolute; WIDTH: 99px; HEIGHT: 66px; TOP: 0; LEFT: 0;">
+                    <thumbnailtemplate class="i" style="position:absolute;"></thumbnailtemplate>
+                    <div class="o">
+                    </div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+            <!-- Arrow Navigator Skin Begin -->
+            <!-- Arrow Left -->
+            <span u="arrowleft" class="jssora11l" style="width: 37px; height: 37px; top: 123px; left: 8px;">
+            </span>
+            <!-- Arrow Right -->
+            <span u="arrowright" class="jssora11r" style="width: 37px; height: 37px; top: 123px; right: 8px">
+            </span>
+            <!-- Arrow Navigator Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+        <a style="display: none" href="http://www.jssor.com">javascript</a>
+        <!-- Trigger -->
+    </div>
+    <!-- Jssor Slider End -->
+
+		</div>
+		<div class='clearfix'></div>
+		<div id='push'></div>
+	</div>
+		</div>
+		<div id="footerline"></div>
+	</div>
+
+	<div id="footer">Copyright � 2019 HAPsI. Charity No: 1122876. All rights reserved.</div>
+</div>
+</body>
+</html>
